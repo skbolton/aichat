@@ -235,7 +235,7 @@ impl RequestData {
         T: std::fmt::Display,
     {
         self.headers
-            .insert("authorization".into(), format!("Bearer {auth}"));
+            .insert("authorization".into(), format!("{auth}"));
     }
 
     pub fn header<K, V>(&mut self, key: K, value: V)
